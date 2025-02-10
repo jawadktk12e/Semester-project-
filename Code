@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Foods Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: tomato;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            margin: 15px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: tomato;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .contact, .owner {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            width: 250px;
+            text-align: center;
+            background-color: brown;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #222;
+            color: white;
+        }
+        .error-message {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function placeOrder(event) {
+            event.preventDefault();
+            alert("Your order has been placed successfully! Thank You!");
+        }
+
+        function contactus(event) {
+            event.preventDefault();
+            alert("Your message has been received! Thank You!");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Delicious Foods Restaurant</h1>
+        <img src="Screenshot_20250120-103513.jpg" width="300" height="200" alt="Restaurant Logo">
+        <p>Your favorite meals delivered to your door</p>
+    </header>
+    <nav>
+        <a href="#Home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+    <section id="menu" class="menu">
+        <!-- Pizza -->
+        <div class="menu-item">
+            <h2>Pizza</h2>
+            <img src="FB_IMG_1736868235070.jpg" width="200" height="200" alt="Pizza">
+            <p>Delicious cheese pizza</p>
+            <p><strong>Rs 600.00</strong></p>
+            <form onsubmit="placeOrder(event)">
+                <label for="pizza-quantity">Quantity:</label>
+                <input type="number" id="pizza-quantity" name="pizza-quantity" min="1" required><br><br>
+                <label for="address-pizza">Enter your full Address for Delivery:</label><br>
+                <textarea id="address-pizza" name="address" rows="2" required></textarea><br><br>
+                <button type="submit">Order Now</button>
+            </form>
+        </div>
+        <!-- Burger -->
+        <div class="menu-item">
+            <h2>Burger</h2>
+            <img src="FB_IMG_1736868180791.jpg" width="200" height="200" alt="Burger">
+            <p>Juicy beef burger</p>
+            <p><strong>Rs 400.00</strong></p>
+            <form onsubmit="placeOrder(event)">
+                <label for="burger-quantity">Quantity:</label>
+                <input type="number" id="burger-quantity" name="burger-quantity" min="1" required><br><br>
+                <label for="address-burger">Enter your full Address for Delivery:</label><br>
+                <textarea id="address-burger" name="address" rows="2" required></textarea><br><br>
+                <button type="submit">Order Now</button>
+            </form>
+        </div>
+        <!-- Pasta -->
+        <div class="menu-item">
+            <h2>Pasta</h2>
+            <img src="FB_IMG_1736868154333.jpg" width="200" height="200" alt="Pasta">
+            <p>Creamy Alfredo pasta</p>
+            <p><strong>Rs 1000.00</strong></p>
+            <form onsubmit="placeOrder(event)">
+                <label for="pasta-quantity">Quantity:</label>
+                <input type="number" id="pasta-quantity" name="pasta-quantity" min="1" required><br><br>
+                <label for="address-pasta">Enter your full Address for Delivery:</label><br>
+                <textarea id="address-pasta" name="address" rows="2" required></textarea><br><br>
+                <button type="submit">Order Now</button>
+            </form>
+        </div>
+        <!-- Chicken Karri -->
+        <div class="menu-item">
+            <h2>Chicken Karri</h2>
+            <img src="FB_IMG_1736868111893.jpg" width="200" height="200" alt="Chicken Karri">
+            <p>Delicious chicken karri</p>
+            <p><strong>Rs 600.00</strong></p>
+            <form onsubmit="placeOrder(event)">
+                <label for="chicken-karri-quantity">Quantity:</label>
+                <input type="number" id="chicken-karri-quantity" name="chicken-karri-quantity" min="1" required><br><br>
+                <label for="address-chicken-karri">Enter your full Address for Delivery:</label><br>
+                <textarea id="address-chicken-karri" name="address" rows="2" required></textarea><br><br>
+                <button type="submit">Order Now</button>
+            </form>
+        </div>
+        <!-- Kabli Palaw -->
+        <div class="menu-item">
+            <h2>Kabli Palaw</h2>
+            <img src="FB_IMG_1736867785353.jpg" width="200" height="200" alt="Kabli Palaw">
+            <p>Kabli palaw</p>
+            <p><strong>Small Parcel: Rs 200.00</strong></p>
+            <form onsubmit="placeOrder(event)">
+                <label for="small-kabli-quantity">Quantity:</label>
+                <input type="number" id="small-kabli-quantity" name="small-kabli-quantity" min="1" required><br><br>
+                <label for="address-small-kabli">Enter your full Address for Delivery:</label><br>
+                <textarea id="address-small-kabli" name="address" rows="2" required></textarea><br><br>
+                <button type="submit">Order Now</button>
+            </form>
+            <p><strong>Big Parcel: Rs 500.00</strong></p>
+            <form onsubmit="placeOrder(event)">
+                <label for="big-kabli-quantity">Quantity:</label>
+                <input type="number" id="big-kabli-quantity" name="big-kabli-quantity" min="1" required><br><br>
+                <label for="address-big-kabli">Enter your full Address for Delivery:</label><br>
+                <textarea id="address-big-kabli" name="address" rows="2" required></textarea><br><br>
+                <button type="submit">Order Now</button>
+            </form>
+        </div>
+        <!-- Biryani -->
+        <div class="menu-item">
+            <h2>Biryani</h2>
+            <img src="FB_IMG_1736864846814.jpg" width="200" height="200" alt="Biryani">
+            <p><strong>Small Parcel: Rs 400.00</strong></p>
+            <form onsubmit="placeOrder(event)">
+                <label for="small-biryani-quantity">Quantity:</label>
+                <input type="number" id="small-biryani-quantity" name="small-biryani-quantity" min="1" required><br><br>
+                <label for="address-small-biryani">Enter your full Address for Delivery:</label><br>
+                <textarea id="address-small-biryani" name="address" rows="2" required></textarea><br><br>
+                <button type="submit">Order Now</button>
+            </form>
+            <p><strong>Big Parcel: Rs 800.00</strong></p>
+            <form onsubmit="placeOrder(event)">
+                <label for="big-biryani-quantity">Quantity:</label>
+                <input type="number" id="big-biryani-quantity" name="big-biryani-quantity" min="1" required><br><br>
+                <label for="address-big-biryani">Enter your full Address for Delivery:</label><br>
+                <textarea id="address-big-biryani" name="address" rows="2" required></textarea><br><br>
+                <button type="submit">Order Now</button>
+            </form>
+        </div>
+    </section>
+    <section id="owner" class="owner">
+        <h2>Meet Our Owner</h2>
+        <img src="/storage/emulated/0/Pictures/Snapseed/1733146257894@1196492114.jpg" width="265" height="350" alt="Owner Picture">
+        <p>My name is Muhammad Jawad, also known as KTK 💸, the owner of Delicious Foods Restaurant.</p>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form onsubmit="contactus(event)">
+            <label for="name">Your Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="gmail">Your Gmail:</label><br>
+            <input type="email" id="gmail" name="gmail" pattern="[a-zA-Z0-9._%+-]+@gmail.com" required placeholder="example@gmail.com"><br><br>
+            <label for="message">Your Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <button type="submit">Send Message</button>
+        </form>
+     <p>For more details, visit our social media pages:</p>
+        <a href="https://www.facebook.com/share/1DF4yR7T6F/" target="_blank">
+            <img src="Facebook_Logo_2023.png" alt="Facebook Logo" width="20" height="20">
+        </a>
+        <a href="https://www.instagram.com/mjawad5242?igshid=NWZreGd1a3pzeWxw" target="_blank">
+            <img src="768px-Instagram_icon.png" alt="Instagram Logo" width="20" height="20">
+        </a>
+        
+    </section>
+    <footer>
+        <p>&copy; 2025 Online Delivery Restaurant. Created by KTK 💸</p>
+    </footer>
+</body>
+</html>
